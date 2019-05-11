@@ -2,6 +2,21 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+\section{Changes in version 1.0.1 (2019-05-11)}{
+
+  \subsection{Changes in \code{R}-code:}{
+    \itemize{
+      \item \code{mtpglm}: Improve handling of coefficient names.
+    }
+  }
+  
+  \subsection{Documentation changes:}{
+    \itemize{
+      \item \code{plot_lambda}: Replace \code{\\dontrun} by \code{\\donttest} as requested by CRAN.
+    }
+  }
+} 
+  
 \section{Changes in version 1.0.0 (2018-12-03)}{
 
   \subsection{Changes in \code{R}-code:}{

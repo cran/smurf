@@ -1,4 +1,4 @@
-7c0cee7bd1641d8f2103ca129b7e119b *DESCRIPTION
+4b0af1e8d8ddf2793c6ba6169fe95cd9 *DESCRIPTION
 41e3e743d7bb92856da794662555e316 *NAMESPACE
 16f180fbf0d80c4e4c22f3780f911b92 *R/Lambda_max.R
 46fadd2e953fdb1f4c54318bd570ab1f *R/Lambda_select.R
@@ -13,7 +13,7 @@ e505ea17371726c1b0285c816f745849 *R/check_input.R
 a7f3409de1462983311ba87cbc119ee3 *R/deviance.R
 5d880111a1976537ae5da2bcd90557c8 *R/fitted.R
 172f48ae49e0a861772f2d2f9aeb08aa *R/glmsmurf-class.R
-1e68f9926365b5dd02bebfae66442418 *R/glmsmurf.R
+052703d6383bef120697a2e3959c4b3f *R/glmsmurf.R
 de076f68da15119849046d75a283abeb *R/glmsmurf_control.R
 162ea48759d4766f0fc8b4fbed2f4b6c *R/glmsmurf_fit.R
 f1f3fe8f97c1b17ce3d741c16f50238b *R/glmsmurf_fit_algorithm.R
@@ -26,14 +26,14 @@ b4ddf590898dd1cf267804d8738bc963 *R/plot_lambda.R
 a56f2ba751ac983ff323606b859e81e5 *R/smurf.R
 a3a993bd2d1738cf45e13cd2c1077058 *R/stand.R
 606b32d7a1064fba7bb0627120af0aba *R/summary.R
-8dbb9cf1a355b8dc24769d7837910fe7 *build/vignette.rds
-4c8c3a0ded5ff4214af25176457a1ade *inst/NEWS.Rd
+039cc974260259e9133c45140032e0d5 *build/vignette.rds
+b62595ffe40c14e40d05cea4c14af633 *inst/NEWS.Rd
 b85b44c004f94719f4ac5a5e4734835e *inst/Rent_example1.R
-9f80a91f4a669d1a60965117bac512e0 *inst/Rent_example2.R
+2d9f7e46b3cecf4eb76b9c6125a7c30d *inst/Rent_example2.R
 1ebe96903bfaf3ecb21a7a77cb9001e9 *inst/Rent_example3.R
 6562bf5409a084543ea621b161469455 *inst/doc/smurf.R
 52d56d179d3286d40456e5df4488b82f *inst/doc/smurf.Rmd
-30661a3aae47a05a64c57a89e10b5279 *inst/doc/smurf.html
+5b39063d46456c32d75977a30c3bac14 *inst/doc/smurf.html
 d9f9e8dff71584413c8fa351c5f49566 *man/coef.glmsmurf.Rd
 50241c1357382d6d764c1d84747be877 *man/coef_reest.Rd
 763594f869f7a2d1e278bca7068c23a3 *man/deviance.glmsmurf.Rd
@@ -45,7 +45,7 @@ e68c6b37981974cd88f33d6b66b26b50 *man/glmsmurf.Rd
 7cf29ba4f31577ba80cc7df3752c393b *man/glmsmurf.control.Rd
 190396718249fc45503a84a2f6f57ba1 *man/p.Rd
 a1df5a8d9f2909bbc437a3f6d2d0b989 *man/plot.glmsmurf.Rd
-1d6b8a9800e2b18ddb37b4332d12e4f4 *man/plot_lambda.Rd
+0aad70e4fe89e7cea84890b2b4fb0e4d *man/plot_lambda.Rd
 f4b388686e7b8e6bcbf6c0a3f2dfa818 *man/plot_reest.Rd
 36a470f1b996298ac847ffd2824be8a9 *man/predict.glmsmurf.Rd
 e8a900b2ca5f0020b786401f0c1483f1 *man/predict_reest.Rd

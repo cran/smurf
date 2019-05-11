@@ -399,43 +399,66 @@ glmsmurf <- function(formula, family, data, weights, start, offset, lambda, lamb
   for (j in 1:length(col.names)) {
     
     # Boolean for interaction
-    inter_bool <- (length(grep("pen\\s*=\\s*\"2dflasso\"", col.names[j])) > 0)
+    inter_bool <- (length(grep("\"2dflasso\"", col.names[j])) > 0)
     
-    # Remove "p(" in beginning of string
-    col.names[j] <- gsub("^p\\(+", "", col.names[j])
+    # Change "(Intercept)" to Intercept
+    col.names[j] <- gsub("\\(Intercept\\)", "Intercept", col.names[j])
+
+    # String without everything within p(), i.e. factor label
+    factor_label <- gsub("^p\\s*\\([^\\)]+\\)", "", col.names[j])
     
-    # Remove "(" in beginning of string
-    col.names[j] <- gsub("^\\(+", "", col.names[j])
+    # Everything within p() (including "p(" and ")")
+    tmp <- regexpr("^p\\s*\\([^\\)]+\\)", col.names[j])
     
-    # Remove 'pred1 = " "' with optional spaces
-    col.names[j] <- gsub("\\s*pred1\\s*=\\s*", "", col.names[j])
-    
-    # Remove 'pred2 = " "' with optional spaces
-    col.names[j] <- gsub("\\s*pred2\\s*=\\s*", "", col.names[j])
-    
-    # Remove ', pen = " "' with optional spaces and any character string or numeric (or space) for pen 
-    col.names[j] <- gsub(",*\\s*pen\\s*=\\s*\"[[:digit:][:alpha:]]*\"", "", col.names[j])
-    
-    # Remove ', group = ' with optional spaces and any or numeric or NULL (or space) for group 
-    col.names[j] <- gsub(",*\\s*group\\s*=\\s*[[:digit:][:alpha:]]*", "", col.names[j])
-    
-    # Remove ', refcat = ' with optional spaces and optional quotes and any or numeric or NULL (or space) for refcat 
-    col.names[j] <- gsub(",*\\s*refcat\\s*=\\s*\"*[[:digit:][:alpha:]]*\"*", "", col.names[j])
-    
-    # Remove ")"
-    col.names[j] <- gsub("\\)+", "", col.names[j])
-    
-    
-    if (inter_bool) {
-      # Combine two predictor names
-      col.names[j] <- gsub(",\\s*", ".", col.names[j])
-      # Add "inter."
-      col.names[j] <- paste0("inter.", col.names[j])
+    # Only if match, otherwise keep column name
+    # No match happens when a variable is added without a penalty (e.g. intercept)
+    if (tmp > 0) {
       
-    } else {
-      # Remove optional commas
-      col.names[j] <- gsub(",*", "", col.names[j])
+      # Everything within p() (including "p(" and ")")
+      col.names[j] <- regmatches(col.names[j], tmp)
+      
+      # Remove "p(" in beginning of string
+      col.names[j] <- gsub("^p\\s*\\(+", "", col.names[j])
+      
+      # Remove 'pred1 = " "' with optional spaces
+      col.names[j] <- gsub("\\s*pred1\\s*=\\s*", "", col.names[j])
+      
+      # Remove 'pred2 = " "' with optional spaces
+      col.names[j] <- gsub("\\s*pred2\\s*=\\s*", "", col.names[j])
+      
+      # Remove ', pen = " "' with optional spaces and any character string or numeric (or space) for pen
+      col.names[j] <- gsub(",*\\s*pen\\s*=\\s*\"[[:digit:][:alpha:]]*\"", "", col.names[j])
+      
+      # Remove ', group = ' with optional spaces and any or numeric or NULL (or space) for group
+      col.names[j] <- gsub(",*\\s*group\\s*=\\s*[[:digit:][:alpha:]]*", "", col.names[j])
+      
+      # Remove ', refcat = ' with optional spaces and optional quotes and any or numeric or NULL (or space) for refcat
+      col.names[j] <- gsub(",*\\s*refcat\\s*=\\s*\"*[[:digit:][:alpha:]]*\"*", "", col.names[j])
+      
+      # Remove ")" at the end
+      col.names[j] <- gsub("\\)$", "", col.names[j])
+      
+      if (inter_bool) {
+        
+        # Remove "\"2dflasso\"" if still present (which happens when no "pen=" is used)
+        col.names[j] <- gsub(",\\s*\"2dflasso\"", "", col.names[j])
+        
+        # Combine two predictor names
+        col.names[j] <- gsub(",\\s*", ".", col.names[j])
+        
+        # Add "inter."
+        col.names[j] <- paste0("inter.", col.names[j])
+        
+      } else {
+        
+        # Remove optional commas
+        col.names[j] <- gsub(",\\s*", "", col.names[j])
+      }
+      
+      # Combine with factor label since this was removed
+      col.names[j] <- paste0(col.names[j], factor_label) 
     }
+     
   }
 
   return(col.names)

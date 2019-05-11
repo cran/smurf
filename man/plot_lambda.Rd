@@ -39,8 +39,7 @@ This plot can only be made when lambda is selected in-sample, out-of-sample or u
          see the \code{lambda} argument of \code{\link{glmsmurf}}.
 }
 \examples{
-\dontrun{
-  
+\donttest{
 # Munich rent data from catdata package
 data("rent", package = "catdata")
 

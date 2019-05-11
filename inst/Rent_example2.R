@@ -1,5 +1,4 @@
-\dontrun{
-  
+\donttest{
 # Munich rent data from catdata package
 data("rent", package = "catdata")
 
