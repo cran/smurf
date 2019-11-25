@@ -4,8 +4,7 @@
 \alias{plot.glmsmurf}
 \title{Plot Coefficients of Estimated Model}
 \usage{
-\method{plot}{glmsmurf}(x, xlab = "Index",
-  ylab = "Estimated coefficients", basic = FALSE, ...)
+\method{plot}{glmsmurf}(x, xlab = "Index", ylab = "Estimated coefficients", basic = FALSE, ...)
 }
 \arguments{
 \item{x}{An object of class '\code{\link[=glmsmurf-class]{glmsmurf}}', typically the result of a call to \code{\link{glmsmurf}} or \code{\link{glmsmurf.fit}}.}

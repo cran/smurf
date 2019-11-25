@@ -9,13 +9,19 @@
 \usage{
 residuals_reest(object, ...)
 
-\method{residuals_reest}{glmsmurf}(object, type = c("deviance",
-  "pearson", "working", "response", "partial"), ...)
+\method{residuals_reest}{glmsmurf}(
+  object,
+  type = c("deviance", "pearson", "working", "response", "partial"),
+  ...
+)
 
 resid_reest(object, ...)
 
-\method{resid_reest}{glmsmurf}(object, type = c("deviance", "pearson",
-  "working", "response", "partial"), ...)
+\method{resid_reest}{glmsmurf}(
+  object,
+  type = c("deviance", "pearson", "working", "response", "partial"),
+  ...
+)
 }
 \arguments{
 \item{object}{An object for which the extraction of model residuals is meaningful. 

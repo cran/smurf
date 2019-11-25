@@ -1,7 +1,7 @@
-## ----setup, include = FALSE----------------------------------------------
+## ----setup, include = FALSE---------------------------------------------------
 library("smurf")
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 data("rent", package = "catdata")
 
 # Urban district in Munich
@@ -36,7 +36,7 @@ rent$bathextra <- factor(rent$bathextra, labels = c("no", "yes"))
 # Is the kitchen well-equipped?
 rent$kitchen <- factor(rent$kitchen, labels = c("no", "yes"))
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  rentm ~ p(area, pen = "gflasso") +
 #          p(year, pen = "flasso", refcat = 2000) + p(rooms, pen = "flasso") +
 #          p(quality, pen = "flasso") + p(size, pen = "flasso") +
@@ -44,10 +44,10 @@ rent$kitchen <- factor(rent$kitchen, labels = c("no", "yes"))
 #          p(tiles, pen = "none") + bathextra +
 #          p(kitchen, pen = "lasso")
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  p(pred1, pred2, pen = "2dflasso")
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 formu <- rentm ~ p(area, pen = "gflasso") + 
                  p(year, pen = "flasso") + p(rooms, pen = "flasso") + 
                  p(quality, pen = "flasso") + p(size, pen = "flasso") +
@@ -55,39 +55,39 @@ formu <- rentm ~ p(area, pen = "gflasso") +
                  p(tiles, pen = "lasso") + p(bathextra, pen = "lasso") + 
                  p(kitchen, pen = "lasso") 
 
-## ---- warning = FALSE----------------------------------------------------
+## ---- warning = FALSE---------------------------------------------------------
 munich.fit <- glmsmurf(formula = formu, family = gaussian(), data = rent, 
                        pen.weights = "glm.stand", lambda = 0.008914)
 
-## ---- warning = FALSE----------------------------------------------------
+## ---- warning = FALSE---------------------------------------------------------
 plot(munich.fit)
 plot_reest(munich.fit)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 summary(munich.fit)
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  munich.fit.cv <- glmsmurf(formula = formu, family = gaussian(), data = rent,
 #                            pen.weights = "glm.stand", lambda = "cv1se.dev",
 #                            control = list(lambda.length = 25L))
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  munich.fit.cv$lambda
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  plot_lambda(munich.fit.cv)
 
-## ----fig1, echo = FALSE, out.width = "545px"-----------------------------
+## ----fig1, echo = FALSE, out.width = "545px"----------------------------------
 knitr::include_graphics("Plot_lambda1.png")
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  # Zoomed plot
 #  plot_lambda(munich.fit.cv, xlim = c(-8, -4), ylim = c(1550, 1750))
 
-## ----fig2, echo = FALSE, out.width = "545px"-----------------------------
+## ----fig2, echo = FALSE, out.width = "545px"----------------------------------
 knitr::include_graphics("Plot_lambda2.png")
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  munich_adj <- matrix(0, 25, 25)
 #  colnames(munich_adj) <- rownames(munich_adj) <- 1:25
 #  munich_adj[1,  c(2, 3, 5, 12, 13)] <- 1
@@ -116,7 +116,7 @@ knitr::include_graphics("Plot_lambda2.png")
 #  munich_adj[24, c(10, 11, 23)] <- 1
 #  munich_adj[25, c(7, 8, 9, 20, 21)] <- 1
 
-## ---- eval = FALSE-------------------------------------------------------
+## ---- eval = FALSE------------------------------------------------------------
 #  formu2 <- rentm ~ p(area, pen = "ggflasso") +
 #                    p(year, pen = "flasso") + p(size, pen = "flasso") +
 #                    p(rooms, pen = "flasso") + p(quality, pen = "flasso") +

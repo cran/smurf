@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Tom Reynkens \email{tomreynkens@hotmail.com} (0000-0002-5516-5107)
+\strong{Maintainer}: Tom Reynkens \email{tomreynkens@hotmail.com} (\href{https://orcid.org/0000-0002-5516-5107}{ORCID})
 
 Authors:
 \itemize{

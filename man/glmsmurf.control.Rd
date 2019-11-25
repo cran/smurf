@@ -4,11 +4,24 @@
 \alias{glmsmurf.control}
 \title{Control Function for Fitting a Multi-Type Regularized GLM Using the SMuRF Algorithm.}
 \usage{
-glmsmurf.control(epsilon = 1e-08, maxiter = 10000, step = NULL,
-  tau = 0.5, reest = TRUE, lambda.vector = NULL, lambda.min = NULL,
-  lambda.max = NULL, lambda.length = 50L, lambda.reest = FALSE,
-  k = 5L, oos.prop = 0.2, validation.index = NULL, ncores = NULL,
-  po.ncores = NULL, print = FALSE)
+glmsmurf.control(
+  epsilon = 1e-08,
+  maxiter = 10000,
+  step = NULL,
+  tau = 0.5,
+  reest = TRUE,
+  lambda.vector = NULL,
+  lambda.min = NULL,
+  lambda.max = NULL,
+  lambda.length = 50L,
+  lambda.reest = FALSE,
+  k = 5L,
+  oos.prop = 0.2,
+  validation.index = NULL,
+  ncores = NULL,
+  po.ncores = NULL,
+  print = FALSE
+)
 }
 \arguments{
 \item{epsilon}{Numeric tolerance value for stopping criterion. A numeric strictly larger than 0, default is \code{1e-8}.}

@@ -2,6 +2,26 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+
+\section{Changes in version 1.0.2 (2019-11-25)}{
+
+ \subsection{Changes in \code{R}-code:}{
+  \itemize{
+    \item Select first element of \code{class(obj)} when \code{obj} might be a \code{matrix} object as \code{matrix} objects will also inherit from class \code{array} in R 4.0.0 (and hence \code{class(obj)} will be of length > 1).
+    \item Add an extra test for the output of a \code{glmsmurf} object where a Graph-Guided Fused Lasso is used.
+   }
+  }
+  
+  \subsection{Documentation changes:}{
+    \itemize{
+      \item Update to \pkg{roxygen2} version 7.0.0.
+      \item Add empty first line to \code{Rent_example2.R} to avoid problems with \pkg{roxygen2} version 7.0.0.
+      \item Move example files from \code{/inst} to \code{/inst/examples}.
+    }
+  }
+} 
+
+
 \section{Changes in version 1.0.1 (2019-05-11)}{
 
   \subsection{Changes in \code{R}-code:}{

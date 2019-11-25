@@ -5,11 +5,17 @@
 \alias{resid.glmsmurf}
 \title{Residuals of Estimated Model}
 \usage{
-\method{residuals}{glmsmurf}(object, type = c("deviance", "pearson",
-  "working", "response", "partial"), ...)
+\method{residuals}{glmsmurf}(
+  object,
+  type = c("deviance", "pearson", "working", "response", "partial"),
+  ...
+)
 
-\method{resid}{glmsmurf}(object, type = c("deviance", "pearson",
-  "working", "response", "partial"), ...)
+\method{resid}{glmsmurf}(
+  object,
+  type = c("deviance", "pearson", "working", "response", "partial"),
+  ...
+)
 }
 \arguments{
 \item{object}{An object of class '\code{\link[=glmsmurf-class]{glmsmurf}}', typically the result of a call to \code{\link{glmsmurf}} or \code{\link{glmsmurf.fit}}.}

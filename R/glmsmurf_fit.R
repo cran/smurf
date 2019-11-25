@@ -47,7 +47,7 @@ glmsmurf.fit <- function(X, y, weights, start, offset, family, pen.cov, n.par.co
   n <- length(y)
   
   # Check if X is of class "Matrix"
-  if (!(class(X) %in% c("Matrix", "dgeMatrix", "dgCMatrix"))) {
+  if (!(class(X)[1] %in% c("Matrix", "dgeMatrix", "dgCMatrix"))) {
     
     # Check if X is numeric
     if (!is.numeric(X)) {

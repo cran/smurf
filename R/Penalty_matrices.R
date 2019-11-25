@@ -129,7 +129,7 @@
   }
   
   # Convert to sparse matrix if not done already
-  if (!(class(adj.matrix) %in% c("dgCMatrix", "dgTMatrix"))) {
+  if (!(class(adj.matrix)[1] %in% c("dgCMatrix", "dgTMatrix"))) {
     adj.matrix <- as(adj.matrix, "sparseMatrix")
   }
   

@@ -463,7 +463,7 @@
       }
       
       # Check if list element of adj.matrix has correct class
-      if (!(class(adj.matrix[[i]]) %in% c("matrix", "Matrix", "dgeMatrix", "dgCMatrix"))) {
+      if (!(class(adj.matrix[[i]])[1] %in% c("matrix", "Matrix", "dgeMatrix", "dgCMatrix"))) {
         stop("A numeric matrix or element of class Matrix was expected in element ", i, " of 'adj.matrix'.")
       }
       

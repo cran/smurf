@@ -7,8 +7,15 @@
 \usage{
 plot_lambda(x, ...)
 
-\method{plot_lambda}{glmsmurf}(x, xlab = NULL, ylab = NULL,
-  lambda.opt = TRUE, cv1se = TRUE, log.lambda = TRUE, ...)
+\method{plot_lambda}{glmsmurf}(
+  x,
+  xlab = NULL,
+  ylab = NULL,
+  lambda.opt = TRUE,
+  cv1se = TRUE,
+  log.lambda = TRUE,
+  ...
+)
 }
 \arguments{
 \item{x}{An object for which the extraction of goodness-of-fit statistics or information criteria is meaningful. 
@@ -39,6 +46,7 @@ This plot can only be made when lambda is selected in-sample, out-of-sample or u
          see the \code{lambda} argument of \code{\link{glmsmurf}}.
 }
 \examples{
+
 \donttest{
 # Munich rent data from catdata package
 data("rent", package = "catdata")

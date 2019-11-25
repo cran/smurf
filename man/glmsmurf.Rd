@@ -5,16 +5,49 @@
 \alias{glmsmurf.fit}
 \title{Fit a Multi-Type Regularized GLM Using the SMuRF Algorithm}
 \usage{
-glmsmurf(formula, family, data, weights, start, offset, lambda,
-  lambda1 = 0, lambda2 = 0, pen.weights, adj.matrix,
-  standardize = TRUE, control = list(), x.return = FALSE,
-  y.return = TRUE, pen.weights.return = FALSE)
+glmsmurf(
+  formula,
+  family,
+  data,
+  weights,
+  start,
+  offset,
+  lambda,
+  lambda1 = 0,
+  lambda2 = 0,
+  pen.weights,
+  adj.matrix,
+  standardize = TRUE,
+  control = list(),
+  x.return = FALSE,
+  y.return = TRUE,
+  pen.weights.return = FALSE
+)
 
-glmsmurf.fit(X, y, weights, start, offset, family, pen.cov, n.par.cov,
-  group.cov, refcat.cov, lambda, lambda1 = 0, lambda2 = 0, pen.weights,
-  adj.matrix, standardize = TRUE, control = list(), formula = NULL,
-  data = NULL, x.return = FALSE, y.return = FALSE,
-  pen.weights.return = FALSE)
+glmsmurf.fit(
+  X,
+  y,
+  weights,
+  start,
+  offset,
+  family,
+  pen.cov,
+  n.par.cov,
+  group.cov,
+  refcat.cov,
+  lambda,
+  lambda1 = 0,
+  lambda2 = 0,
+  pen.weights,
+  adj.matrix,
+  standardize = TRUE,
+  control = list(),
+  formula = NULL,
+  data = NULL,
+  x.return = FALSE,
+  y.return = FALSE,
+  pen.weights.return = FALSE
+)
 }
 \arguments{
 \item{formula}{A \code{\link[stats]{formula}} object describing the model to be fitted. 

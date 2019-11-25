@@ -112,3 +112,15 @@ munich_adj[24, c(10, 11, 23)] <- 1
 munich_adj[25, c(7, 8, 9, 20, 21)] <- 1
 
 munich_adj_orig <- munich_adj
+
+# With Graph-Guided Fused Lasso
+formu4 <- rentm ~ p(area, pen = "ggflasso") + 
+  p(year, pen = "flasso") + p(size, pen = "flasso") + 
+  p(rooms, pen = "flasso") + p(quality, pen = "flasso") +
+  p(warm, pen = "lasso") + p(central, pen = "lasso") + 
+  p(tiles, pen = "lasso") + p(bathextra, pen = "lasso") +
+  p(kitchen, pen = "lasso") 
+
+munich.fit4 <- glmsmurf(formula = formu4, family = gaussian(), data = rent, 
+                        pen.weights = "glm.stand", lambda = 0.041787, 
+                        adj.matrix = list(area = munich_adj), x.return = TRUE)

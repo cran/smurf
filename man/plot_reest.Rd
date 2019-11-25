@@ -7,8 +7,13 @@
 \usage{
 plot_reest(x, ...)
 
-\method{plot_reest}{glmsmurf}(x, xlab = "Index",
-  ylab = "Re-estimated coefficients", basic = FALSE, ...)
+\method{plot_reest}{glmsmurf}(
+  x,
+  xlab = "Index",
+  ylab = "Re-estimated coefficients",
+  basic = FALSE,
+  ...
+)
 }
 \arguments{
 \item{x}{An object for which the extraction of model coefficients is meaningful. 

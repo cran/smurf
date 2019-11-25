@@ -29,7 +29,7 @@
 #' 
 #' @seealso \code{\link{glmsmurf}}, \code{\link{glmsmurf-class}} 
 #' 
-#' @example /inst/Rent_example2.R
+#' @example /inst/examples/Rent_example2.R
 plot_lambda <- function(x, ...) UseMethod("plot_lambda", x)
 
 #' @export

@@ -236,6 +236,9 @@ test_that("Test predict and predict_reest", {
   expect_equal(as.matrix(predict(munich.fit3, type = "terms")), 
                as.matrix(predict(munich.fit3, type = "terms", newdata = rent)))
   
+  # With Graph-Guided Fused Lasso
+  expect_equal(as.matrix(predict(munich.fit4, type = "terms")), 
+               as.matrix(predict(munich.fit4, type = "terms", newdata = rent)))
   
   ########################
   # Check if predictions are the same when data is provided as newdata and with newoffset

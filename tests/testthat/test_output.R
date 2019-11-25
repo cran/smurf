@@ -536,7 +536,7 @@ test_that("Test lambda.coefficients in output", {
 test_that("Test X in output", {
   
   # Check if matrix
-  expect_true((class(munich.fit$X) %in% c("Matrix", "dgeMatrix", "dgCMatrix")) |
+  expect_true((class(munich.fit$X)[1] %in% c("Matrix", "dgeMatrix", "dgCMatrix")) |
               (is.matrix(munich.fit$X) & is.numeric(munich.fit$X)))
   
   # Check dimension
@@ -730,7 +730,7 @@ test_that("Test re-estimated objective function in output", {
 test_that("Test X.reest in output", {
   
   # Check if matrix
-  expect_true((class(munich.fit$X.reest) %in% c("Matrix", "dgeMatrix", "dgCMatrix")) |
+  expect_true((class(munich.fit$X.reest)[1] %in% c("Matrix", "dgeMatrix", "dgCMatrix")) |
                 (is.matrix(munich.fit$X.reest) & is.numeric(munich.fit$X.reest)))
   
   # Check dimension

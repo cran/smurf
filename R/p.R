@@ -53,7 +53,7 @@
 #' 
 #' @seealso \code{\link{glmsmurf}}
 #' 
-#' @example /inst/Rent_example3.R
+#' @example /inst/examples/Rent_example3.R
 p <- function(pred1, pred2 = NULL, pen = "lasso", refcat = NULL, group = NULL) {
   
   

@@ -4,8 +4,13 @@
 \alias{predict.glmsmurf}
 \title{Predictions Using Estimated Model}
 \usage{
-\method{predict}{glmsmurf}(object, newdata = NULL, newoffset = NULL,
-  type = c("link", "response", "terms"), ...)
+\method{predict}{glmsmurf}(
+  object,
+  newdata = NULL,
+  newoffset = NULL,
+  type = c("link", "response", "terms"),
+  ...
+)
 }
 \arguments{
 \item{object}{An object of class '\code{\link[=glmsmurf-class]{glmsmurf}}', typically the result of a call to \code{\link{glmsmurf}} or \code{\link{glmsmurf.fit}}.}

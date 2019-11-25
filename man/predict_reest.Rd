@@ -7,8 +7,13 @@
 \usage{
 predict_reest(object, ...)
 
-\method{predict_reest}{glmsmurf}(object, newdata = NULL,
-  newoffset = NULL, type = c("link", "response", "terms"), ...)
+\method{predict_reest}{glmsmurf}(
+  object,
+  newdata = NULL,
+  newoffset = NULL,
+  type = c("link", "response", "terms"),
+  ...
+)
 }
 \arguments{
 \item{object}{An object for which predictions are meaningful. 
