@@ -41,6 +41,12 @@ test_that("Test input for weights", {
                "'weights' must be a vector of finite numbers.",
                fixed = TRUE)
   
+  # Check if warning in standardisation when weights sum to one
+  expect_warning(glmsmurf(formu, data = rent, family = gaussian(), weights = rep(1/nrow(rent), nrow(rent)),
+                          lambda = 1),
+                 "Weights sum to one, biased weighted standard deviation is used in standardization.",
+               fixed = TRUE)
+  
   # Check default
   n <- 10
   expect_equal(.check_input_weights(n = n),

@@ -2,7 +2,7 @@
 library("smurf")
 
 ## -----------------------------------------------------------------------------
-data("rent", package = "catdata")
+data("rent")
 
 # Urban district in Munich
 rent$area <- as.factor(rent$area)
@@ -13,7 +13,7 @@ rent$year <- as.factor(floor(rent$year / 10) * 10)
 # Number of rooms
 rent$rooms <- as.factor(rent$rooms)
 
-# Quality of the house with levels `fair`, `good` and `excellent`
+# Quality of the house with levels "fair", "good" and "excellent"
 rent$quality <- as.factor(rent$good + 2 * rent$best)
 levels(rent$quality) <- c("fair", "good", "excellent")
 

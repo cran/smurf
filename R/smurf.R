@@ -8,8 +8,6 @@
 #############################
 # Import functions from packages
 
-#' @import catdata
-#' 
 #' @importFrom glmnet glmnet
 #' 
 #' @importFrom graphics abline

@@ -1,8 +1,8 @@
 
 # Run fitting procedure on Munich rent example
 
-# Munich rent data from catdata package
-data("rent", package = "catdata", envir = environment())
+# Munich rent data
+data("rent")
 
 # Urban district in Munich
 rent$area <- as.factor(rent$area)
@@ -46,7 +46,7 @@ formu <- rentm ~ p(area, pen = "gflasso", refcat = 3) +
 # (with MSE as measure), see example(plot_lambda)
 munich.fit <- glmsmurf(formu, family = gaussian(), data = rent,
                        pen.weights = "glm.stand", lambda = 0.008914, 
-                       control = list(eps = 1e-5), x.return = TRUE)
+                       control = list(eps = 1e-5), x.return = TRUE, pen.weights.return = TRUE)
 
 # No re-estimation
 munich.fit2 <- glmsmurf(formu, family = gaussian(), data = rent,

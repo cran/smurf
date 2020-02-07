@@ -3,6 +3,24 @@
 \encoding{UTF-8}
 
 
+\section{Changes in version 1.0.3 (2020-02-07)}{
+
+ \subsection{Changes in \code{R}-code:}{
+  \itemize{
+    \item Add extra tests for proximal operators, number of cross-validation folds and prior weights. 
+   }
+  }
+  
+  \subsection{Miscellaneous changes:}{
+      \itemize{
+        \item Add \code{rent} dataset from \pkg{catdata} as this package is scheduled to be archived on CRAN on 14 February 2020.
+        \item Correct README to display correct pipeline status on GitLab.
+      }
+  }
+  
+}
+
+
 \section{Changes in version 1.0.2 (2019-11-25)}{
 
  \subsection{Changes in \code{R}-code:}{

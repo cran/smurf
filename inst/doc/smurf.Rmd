@@ -36,10 +36,10 @@ This vignette describes how to use the most important functions of the package.
 
 ## Data
 
-All functions will be illustrated using the rent data from the **catdata** package which contains the rent prices for Munich residences in 2003. The goal is to predict the monthly rent per square meter, based on a set of predictors. Since this data was studied previously by @gertheiss2010, the predictors are pretreated in the same way. 
+All functions will be illustrated using a dataset with rent prices for Munich residences in 2003. The goal is to predict the monthly rent per square meter, based on a set of predictors. Since this data was studied previously by @gertheiss2010, the predictors are pre-treated in the same way. 
 
 ```{r}
-data("rent", package = "catdata")
+data("rent")
 
 # Urban district in Munich
 rent$area <- as.factor(rent$area)
@@ -50,7 +50,7 @@ rent$year <- as.factor(floor(rent$year / 10) * 10)
 # Number of rooms
 rent$rooms <- as.factor(rent$rooms)
 
-# Quality of the house with levels `fair`, `good` and `excellent`
+# Quality of the house with levels "fair", "good" and "excellent"
 rent$quality <- as.factor(rent$good + 2 * rent$best)
 levels(rent$quality) <- c("fair", "good", "excellent")
 

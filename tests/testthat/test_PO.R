@@ -73,6 +73,18 @@ test_that("Test ADMM", {
     expect_equal(dim(ADMM_aux1), dim(ADMM_aux2))
     expect_true(max(abs(ADMM_aux1 - ADMM_aux1)) < 1e-14) 
   }
+  
+  ##############
+  # Tests with non-zero lambda1 and/or lambda2
+  
+  # lambda1 list
+  lambda1 <- list(intercept = 0, age = 1, area = 2, lambda.orig = 1)
+  # lambda2 list
+  lambda2 <- list(intercept = 0, age = 1.5, area = 3.2, lambda.orig = 1)
+  
+  expect_error(.PO(beta.tilde = beta.tilde, beta.old = beta.old, pen.cov = pen.cov, n.par.cov = n.par.cov, group.cov = group.cov, 
+      pen.mat.cov = pen.mat.cov, pen.mat.cov.aux = pen.mat.cov.aux1, lambda = lambda, lambda1 = lambda1, lambda2 = lambda2, 
+      step = step, po.ncores = 1), NA)
 })
 
 

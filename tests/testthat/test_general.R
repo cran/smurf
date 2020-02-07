@@ -38,3 +38,19 @@ test_that("Test print", {
                                                  control = list(print = TRUE, eps = 1e-5)))),
                  NA)
 })
+
+
+test_that("Test glmsmurf.fit", {
+  
+  # Run glmsmurf.fit with ordinary matrix type (for X)
+  expect_error(glmsmurf.fit(X = as.matrix(munich.fit$X), y = munich.fit$y, weights = munich.fit$weights, 
+                            start = munich.fit$coefficients * runif(length(munich.fit$coefficients)), 
+                            offset = munich.fit$offset, 
+                            family = munich.fit$family, 
+                            pen.cov = munich.fit$pen.cov, n.par.cov = munich.fit$n.par.cov, 
+                            group.cov = munich.fit$group.cov, refcat.cov = munich.fit$refcat.cov,
+                            lambda = munich.fit$lambda, pen.weights = munich.fit$pen.weights),
+               NA)
+})
+
+glmsmurf.fit

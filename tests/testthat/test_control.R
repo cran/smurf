@@ -200,6 +200,14 @@ test_that("Test input for 'k' in glmsmurf.control", {
   expect_error(do.call("glmsmurf.control", list(k = Inf)),
                "'k' must be a finite strictly positive integer of length 1.",
                fixed = TRUE)
+  
+  
+  expect_error(glmsmurf(formu, family = gaussian(), data = rent,
+                         pen.weights = "glm.stand", lambda = "cv.dev",
+                        control = glmsmurf.control(k = nrow(rent)+1)),
+               "The number of cross-validation folds cannot be larger than the number of observations.",
+               fixed = TRUE)
+  
 })
 
 

@@ -57,8 +57,8 @@ the interaction of 'age.binned' and 'power.binned' can also be present in the mo
 An overview of the different penalty types and their usage can be found in the package vignette.
 }
 \examples{
-# Munich rent data from catdata package
-data("rent", package = "catdata")
+# Munich rent data
+data("rent")
 
 # The considered predictors are the same as in 
 # Gertheiss and Tutz (Ann. Appl. Stat., 2010).
@@ -73,7 +73,7 @@ rent$year <- as.factor(floor(rent$year / 10) * 10)
 # Number of rooms
 rent$rooms <- as.factor(rent$rooms)
 
-# Quality of the house with levels `fair`, `good` and `excellent`
+# Quality of the house with levels "fair", "good" and "excellent"
 rent$quality <- as.factor(rent$good + 2 * rent$best)
 levels(rent$quality) <- c("fair", "good", "excellent")
 
