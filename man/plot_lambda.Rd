@@ -107,7 +107,7 @@ formu <- rentm ~ p(area, pen = "gflasso") +
 # set to 25 using the control argument (default is 50).
 munich.fit.cv <- glmsmurf(formula = formu, family = gaussian(), data = rent, 
                           pen.weights = "glm.stand", lambda = "cv1se.dev",
-                          control = list(lambda.length = 25L))
+                          control = list(lambda.length = 25L, ncores = 1L))
 
 
 # Plot average deviance over cross-validation folds as a function of the logarithm of lambda

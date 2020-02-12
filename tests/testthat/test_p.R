@@ -3,8 +3,7 @@ context("Test p function for formula")
 
 test_that("Test penalty name in p function", {
   
-  formu <- rentm ~ p(area, pen = "gglasso")
-  expect_error(glmsmurf(formu, family = gaussian(), data = rent),
+  expect_error(glmsmurf(rentm ~ p(area, pen = "gglasso"), family = gaussian(), data = rent),
                "Invalid penalty name.")
 })
 

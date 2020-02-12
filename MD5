@@ -1,4 +1,4 @@
-88213b3a0fa6852bcd9001de38d3eece *DESCRIPTION
+076a803ad2d24f4f96f2d43a6bd1cb44 *DESCRIPTION
 30d006c10882685765a2f69534bc8270 *NAMESPACE
 16f180fbf0d80c4e4c22f3780f911b92 *R/Lambda_max.R
 46fadd2e953fdb1f4c54318bd570ab1f *R/Lambda_select.R
@@ -29,12 +29,12 @@ a3a993bd2d1738cf45e13cd2c1077058 *R/stand.R
 606b32d7a1064fba7bb0627120af0aba *R/summary.R
 41c4c3a380d7b743377d21c6e5f57af6 *build/vignette.rds
 cc5875316011b8f5c87af2a3c05e5c87 *data/rent.rda
-dd552634b39f6d9850132ee52ebb1db9 *inst/NEWS.Rd
+b37c1f414cf61b6a8f8e36130bb6bc2f *inst/NEWS.Rd
 541eb37b4080e19408de5edffa217aeb *inst/doc/smurf.R
 29064044658cc9b14c50ad7ecd6d436e *inst/doc/smurf.Rmd
-efdb2976e73623247347825127851d1e *inst/doc/smurf.html
+52a2a0bc10c87e4bc5dc6c4a1d1ca82d *inst/doc/smurf.html
 d8d8f9762d9960e49768bf7d90f268fa *inst/examples/Rent_example1.R
-8e7788292484d7662e9b0dc0256ff2c5 *inst/examples/Rent_example2.R
+eccaba7d75ce5f1191c63b863a62c0ac *inst/examples/Rent_example2.R
 e5f64b590564507a756d60b0d7a0fa34 *inst/examples/Rent_example3.R
 77099b86780f2f6459fb3b32e80ba353 *man/coef.glmsmurf.Rd
 f2d4c9a6ec4da07f757d74938f857777 *man/coef_reest.Rd
@@ -47,7 +47,7 @@ c15fc540b85e1c2e2f13415129a68897 *man/deviance.glmsmurf.Rd
 db937c91578d0f33cb2fcb476997cad3 *man/glmsmurf.control.Rd
 e5d90f7decbb2adc886c6bae6407c48f *man/p.Rd
 60ec9d9ffc1fde1b7646561aab7f3d1a *man/plot.glmsmurf.Rd
-dfaa7747e8c40df828013a40441d2b5f *man/plot_lambda.Rd
+af47da7303b52a2b8d7bc785bf24633d *man/plot_lambda.Rd
 f8df49ad304f878e00dda8ab1532fe95 *man/plot_reest.Rd
 be8b7e45ba87783603d95a6d622548e6 *man/predict.glmsmurf.Rd
 79176146285df168955738becbaa0c67 *man/predict_reest.Rd
@@ -66,9 +66,9 @@ d6d086826d21a711295d4bca07329d46 *tests/testthat/helper_fit.R
 77156adad9355f16935201ae46702368 *tests/testthat/test_S3.R
 3f261e12d612d9907f39080b63046840 *tests/testthat/test_control.R
 375c249477b08ceed821a2f57a46514a *tests/testthat/test_general.R
-7656df3fe909a8a9936bbca7748d672a *tests/testthat/test_input.R
+5462e7d3f2e9ebf393ba84df009e5d03 *tests/testthat/test_input.R
 f0fa081e7a5207536313ecb7c07ddce5 *tests/testthat/test_output.R
-3df1dec323909f977f0ec5d1778ed69d *tests/testthat/test_p.R
+c7fa2c84d40d25dc8ff27818515ee6e0 *tests/testthat/test_p.R
 705652c8c42bb7899340f9f63c6be4bb *tests/testthat/test_penaltymat.R
 8bad227b7164a32273ecc9b73a5d2fe4 *vignettes/Plot_lambda1.png
 b00a65a8233f1069d1ff6db0012a1f50 *vignettes/Plot_lambda2.png

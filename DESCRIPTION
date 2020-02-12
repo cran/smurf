@@ -1,8 +1,8 @@
 Type: Package
 Package: smurf
 Title: Sparse Multi-Type Regularized Feature Modeling
-Version: 1.0.3
-Date: 2020-02-07
+Version: 1.0.4
+Date: 2020-02-11
 Authors@R: c(
           person("Tom", "Reynkens", email = "tomreynkens@hotmail.com", role = c("aut", "cre"), 
                  comment = c(ORCID = "0000-0002-5516-5107")),
@@ -24,10 +24,10 @@ Encoding: UTF-8
 LazyData: yes
 NeedsCompilation: yes
 RoxygenNote: 7.0.2
-Packaged: 2020-02-07 09:37:36 UTC; tom
+Packaged: 2020-02-11 20:19:45 UTC; tom
 Author: Tom Reynkens [aut, cre] (<https://orcid.org/0000-0002-5516-5107>),
   Sander Devriendt [aut],
   Katrien Antonio [aut]
 Maintainer: Tom Reynkens <tomreynkens@hotmail.com>
 Repository: CRAN
-Date/Publication: 2020-02-07 10:30:02 UTC
+Date/Publication: 2020-02-12 15:10:02 UTC

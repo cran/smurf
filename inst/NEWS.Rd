@@ -2,6 +2,21 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+\section{Changes in version 1.0.4 (2020-02-09)}{
+
+  \subsection{Changes in \code{R}-code:}{
+      \itemize{
+        \item Adapt test for input for prior weights to catch multiple warnings.
+      }
+  }
+  
+  \subsection{Documentation changes:}{
+    \itemize{
+      \item Use only one core to select the optimal value of \code{lambda} in the example of \code{plot_lambda}.
+    }
+  }
+  
+}
 
 \section{Changes in version 1.0.3 (2020-02-07)}{
 
