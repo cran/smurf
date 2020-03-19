@@ -222,7 +222,7 @@
 
             
       # Check if all levels are present in cross-validation training sample
-      if (any(colSums(abs(X.train)) < 1e-14 & colSums(abs(X)) > 1e-14)) {
+      if (any(colSums(abs(X.train)) < eps_num & colSums(abs(X)) > eps_num)) {
         stop(paste0("Some levels are missing in cross-validation sample ", k, ".", 
                     " Please use a different (larger) value for 'k' in the control object."))
       }

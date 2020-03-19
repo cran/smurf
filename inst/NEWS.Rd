@@ -2,6 +2,24 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+\section{Changes in version 1.0.5 (2020-02-12)}{
+
+  \subsection{Changes in \code{R}-code:}{
+      \itemize{
+        \item Use numerical tolerance that is also suitable on platforms without a long double.
+        \item Use five-fold instead of two-fold cross-validation in tests.
+      }
+  }
+  
+    \subsection{Miscellaneous changes:}{
+      \itemize{
+        \item Use \code{rent} dataset from \pkg{catdata} again as this package will no longer be archived.
+        \item Use default date format for vignette date.
+      }
+  }
+  
+}
+
 \section{Changes in version 1.0.4 (2020-02-09)}{
 
   \subsection{Changes in \code{R}-code:}{

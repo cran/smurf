@@ -478,9 +478,9 @@ test_that("Test lambda.measures in output", {
   expect_equal(as.numeric(sapply(munich.fit.oos$lambda.measures, dim)),
                rep(c(3, 1), 3L))
   expect_equal(as.numeric(sapply(munich.fit.cv$lambda.measures, dim)),
-               rep(c(3, 2), 3L))
+               rep(c(3, 5), 3L))
   expect_equal(as.numeric(sapply(munich.fit.cv1se$lambda.measures, dim)),
-               rep(c(3, 2), 3L))
+               rep(c(3, 5), 3L))
   
   # Check column names
   expect_equal(as.character(sapply(munich.fit.is$lambda.measures, colnames)),
@@ -488,9 +488,9 @@ test_that("Test lambda.measures in output", {
   expect_equal(as.character(sapply(munich.fit.oos$lambda.measures, colnames)),
                rep("Out-of-sample", 3L))
   expect_equal(as.character(sapply(munich.fit.cv$lambda.measures, colnames)),
-               rep(paste("Fold", 1:2), 3L))
+               rep(paste("Fold", 1:5), 3L))
   expect_equal(as.character(sapply(munich.fit.cv1se$lambda.measures, colnames)),
-               rep(paste("Fold", 1:2), 3L))
+               rep(paste("Fold", 1:5), 3L))
   
   # Check row names
   expect_equal(as.numeric(sapply(munich.fit.is$lambda.measures, rownames)),

@@ -44,7 +44,7 @@ test_that("Test ADMM", {
     
   # Expect proximal operators to be equal up to numerical precision
   expect_equal(length(PO1), length(PO2))
-  expect_true(max(abs(PO1 - PO2)) < 1e-14) 
+  expect_true(max(abs(PO1 - PO2)) < eps_num) 
   
   
   ##############
@@ -71,7 +71,7 @@ test_that("Test ADMM", {
     
     # Expect matrices to be equal
     expect_equal(dim(ADMM_aux1), dim(ADMM_aux2))
-    expect_true(max(abs(ADMM_aux1 - ADMM_aux1)) < 1e-14) 
+    expect_true(max(abs(ADMM_aux1 - ADMM_aux1)) < eps_num) 
   }
   
   ##############
@@ -149,7 +149,7 @@ test_that("Test PO and penalty functions", {
   names(po2.split) <- NULL
   
   # Expect semi-manual computation to give the same result as .PO function (up to numerical precision)
-  expect_true(max(abs(po1() - unlist(po2.split))) < 1e-14)
+  expect_true(max(abs(po1() - unlist(po2.split))) < eps_num)
   
   
   # Run PO on 2 cores and expect no error

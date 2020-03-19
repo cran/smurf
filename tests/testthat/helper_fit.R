@@ -1,8 +1,8 @@
 
 # Run fitting procedure on Munich rent example
 
-# Munich rent data
-data("rent")
+# Munich rent data from catdata package
+data("rent", package = "catdata", envir = environment())
 
 # Urban district in Munich
 rent$area <- as.factor(rent$area)
@@ -74,12 +74,12 @@ munich.fit.oos <- suppressWarnings(glmsmurf(formu, family = gaussian(), data = r
 # Selection of lambda (CV)
 munich.fit.cv <- suppressWarnings(glmsmurf(formu, family = gaussian(), data = rent,
                                            pen.weights = "glm.stand", lambda = "cv.mse", 
-                                           control = list(eps = 1e-5, lambda.length = 3L, k = 2L, ncores = 1L)))
+                                           control = list(eps = 1e-5, lambda.length = 3L, k = 5L, ncores = 1L)))
 
 # Selection of lambda (CV with 1SE rule)
 munich.fit.cv1se <- suppressWarnings(glmsmurf(formu, family = gaussian(), data = rent,
                                               pen.weights = "glm.stand", lambda = "cv1se.mse", 
-                                              control = list(eps = 1e-5, lambda.length = 3L, k = 2L, ncores = 1L)))
+                                              control = list(eps = 1e-5, lambda.length = 3L, k = 5L, ncores = 1L)))
 
 
 # Compute adjacency matrix for Munich

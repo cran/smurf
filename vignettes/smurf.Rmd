@@ -3,7 +3,7 @@ title: "Introduction to the *smurf* package"
 author: |
  | Tom Reynkens, Sander Devriendt and Katrien Antonio
  | LRisk, Faculty of Economics and Business, KU Leuven
-date: '`r format(Sys.Date(), "%d %B %Y")`'
+date: '`r Sys.Date()`'
 bibliography: smurf.bib
 nocite: |
  @SMuRF, @fista, @bookhastie
@@ -36,10 +36,10 @@ This vignette describes how to use the most important functions of the package.
 
 ## Data
 
-All functions will be illustrated using a dataset with rent prices for Munich residences in 2003. The goal is to predict the monthly rent per square meter, based on a set of predictors. Since this data was studied previously by @gertheiss2010, the predictors are pre-treated in the same way. 
+All functions will be illustrated using the rent data from the **catdata** package which contains the rent prices for Munich residences in 2003. The goal is to predict the monthly rent per square meter, based on a set of predictors. Since this data was studied previously by @gertheiss2010, the predictors are pretreated in the same way. 
 
 ```{r}
-data("rent")
+data("rent", package = "catdata")
 
 # Urban district in Munich
 rent$area <- as.factor(rent$area)

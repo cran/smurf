@@ -80,7 +80,7 @@
                          # lambda1[[j]] can be a vector, lambda2[[j]] is always a single number
                          lambda1 = lambda1[[j]], lambda2 = lambda2[[j]],
                          penmat = pen.mat.cov[[j]], Q = pen.mat.cov.aux[[j]]$Q, eigval = pen.mat.cov.aux[[j]]$eigval, 
-                         fast = all(abs(pen.mat.cov.aux[[j]]$eigval) >= 1e-10), maxiter = 1e4, rho = 1, 
+                         fast = all(abs(pen.mat.cov.aux[[j]]$eigval) >= eps_num), maxiter = 1e4, rho = 1, 
                          beta_old = beta.old.split[[j]]))
       
     } else {

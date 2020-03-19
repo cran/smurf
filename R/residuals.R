@@ -118,7 +118,7 @@ resid_reest.glmsmurf <- residuals_reest.glmsmurf
       # Compute y based on residuals
       y <- mu + resid
       # Round y if very close to integer
-      ind.round <- which(abs(y - round(y)) < 1e-15)
+      ind.round <- which(abs(y - round(y)) < eps_num)
       y[ind.round] <- round(y)[ind.round]
     }
     

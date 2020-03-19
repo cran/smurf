@@ -57,8 +57,8 @@ the interaction of 'age.binned' and 'power.binned' can also be present in the mo
 An overview of the different penalty types and their usage can be found in the package vignette.
 }
 \examples{
-# Munich rent data
-data("rent")
+# Munich rent data from catdata package
+data("rent", package = "catdata")
 
 # The considered predictors are the same as in 
 # Gertheiss and Tutz (Ann. Appl. Stat., 2010).

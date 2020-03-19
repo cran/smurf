@@ -25,7 +25,7 @@
   if (standardize & length(ind.stand) > 0) {
     
     # Check if the weights sum to one
-    if (abs(sum(weights) - 1) < 1e-14) {
+    if (abs(sum(weights) - 1) < eps_num) {
       # Nothing added in denominator which results in biased weighted standard deviation
       wsd <- 0
       warning("Weights sum to one, biased weighted standard deviation is used in standardization.")

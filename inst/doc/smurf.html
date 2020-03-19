@@ -10,6 +10,7 @@
 
 
 
+<meta name="date" content="2020-03-19" />
 
 <title>Introduction to the smurf package</title>
 
@@ -364,7 +365,7 @@ summary {
 <h1 class="title toc-ignore">Introduction to the <em>smurf</em> package</h1>
 <h4 class="author"><div class="line-block">Tom Reynkens, Sander Devriendt and Katrien Antonio<br />
 LRisk, Faculty of Economics and Business, KU Leuven</div></h4>
-<h4 class="date">11 februari 2020</h4>
+<h4 class="date">2020-03-19</h4>
 
 </div>
 
@@ -381,8 +382,8 @@ This vignette describes how to use the most important functions of the package.<
 </ul>
 <div id="data" class="section level2">
 <h2><span class="header-section-number">1.1</span> Data</h2>
-<p>All functions will be illustrated using a dataset with rent prices for Munich residences in 2003. The goal is to predict the monthly rent per square meter, based on a set of predictors. Since this data was studied previously by <span class="citation">Gertheiss and Tutz (2010)</span>, the predictors are pre-treated in the same way.</p>
-<pre class="r"><code>data(&quot;rent&quot;)
+<p>All functions will be illustrated using the rent data from the <strong>catdata</strong> package which contains the rent prices for Munich residences in 2003. The goal is to predict the monthly rent per square meter, based on a set of predictors. Since this data was studied previously by <span class="citation">Gertheiss and Tutz (2010)</span>, the predictors are pretreated in the same way.</p>
+<pre class="r"><code>data(&quot;rent&quot;, package = &quot;catdata&quot;)
 
 # Urban district in Munich
 rent$area &lt;- as.factor(rent$area)

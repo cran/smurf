@@ -189,7 +189,7 @@ glmsmurf.fit <- function(X, y, weights, start, offset, family, pen.cov, n.par.co
     valdata$offset.oos <- offset[validation.index]
     
     # Check if all levels are present in training sample
-    if (any(colSums(abs(X[training.index, , drop = FALSE])) < 1e-14 & colSums(abs(X)) > 1e-14)) {
+    if (any(colSums(abs(X[training.index, , drop = FALSE])) < eps_num & colSums(abs(X)) > eps_num)) {
       stop(paste0("Some levels are missing in the training sample. Please provide different indices in 'validation.index' in the control object",
                   " or use a different (smaller) value for 'oos.prop' in the control object."))
     }

@@ -48,8 +48,8 @@ This plot can only be made when lambda is selected in-sample, out-of-sample or u
 \examples{
 
 \donttest{
-# Munich rent data
-data("rent")
+# Munich rent data from catdata package
+data("rent", package = "catdata")
 
 # The considered predictors are the same as in 
 # Gertheiss and Tutz (Ann. Appl. Stat., 2010).

@@ -2,7 +2,7 @@
 library("smurf")
 
 ## -----------------------------------------------------------------------------
-data("rent")
+data("rent", package = "catdata")
 
 # Urban district in Munich
 rent$area <- as.factor(rent$area)

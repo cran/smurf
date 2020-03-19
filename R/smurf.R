@@ -8,6 +8,8 @@
 #############################
 # Import functions from packages
 
+#' @import catdata
+#'
 #' @importFrom glmnet glmnet
 #' 
 #' @importFrom graphics abline
@@ -63,6 +65,10 @@
 #' @importFrom stats sd
 #' @importFrom stats terms
 #' @importFrom stats weighted.mean
+
+#############################
+# Numerical tolerance
+eps_num <- min(sqrt(.Machine$double.eps), 100 * .Machine$double.eps)
 
 #############################
 # Make C code recognisable
