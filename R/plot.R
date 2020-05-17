@@ -15,7 +15,7 @@
 #' @param xlab Label for the x-axis, default is \code{"Index"}.
 #' @param ylab Label for the y-axis, default is \code{"Estimated coefficients"}.
 #' @param basic Logical indicating if the basic lay-out is used for the plot, default is \code{FALSE}.
-#' @param ... Additional arguments for the \code{\link[graphics]{plot}} function.
+#' @param ... Additional arguments for the \code{\link[graphics:plot.default]{plot}} function.
 #' 
 #' @details When \code{basic=FALSE}, the improved lay-out for the plot is used. Per predictor, groups of equal coefficients are indicated
 #' in the same color (up to 8 colors), and zero coefficients are indicated by grey squares. 

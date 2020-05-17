@@ -173,21 +173,6 @@
           
         } else {
           
-          # Error if family is not supported by glmnet
-          if (!(family$family %in% c("binomial", "gaussian", "poisson"))) {
-            stop("GLM penalty weights are not possible for this family when the model matrix does not have full rank, please use GAM penalty weights or equal penalty weights.")
-          }
-          
-          # Warning if family with chosen link function is not supported by glmnet
-          if ((family$family == "binomial" & family$link != "logit") | 
-              (family$family == "gaussian" & family$link != "identity") |
-              (family$family == "poisson" & family$link != "log")) {
-            warning("GLM penalty weights are unreliable when the model matrix does not have full rank and another link function than the default one is used.",
-                    " Please use GAM penalty weights or equal penalty weights if possible.")
-          }
-          
-          
-          
           # Compute GLM coefficients using GLM with small ridge penalty (alpha=0) to avoid problems with multicollinearity
           # Do not include column for intercept
           glm.fit <- glmnet(y = y, x = X[, -1L], family = family$family, weights = weights, offset = offset,

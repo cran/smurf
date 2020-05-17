@@ -21,7 +21,7 @@ plot_lambda(x, ...)
 \item{x}{An object for which the extraction of goodness-of-fit statistics or information criteria is meaningful. 
 E.g. an object of class '\code{\link[=glmsmurf-class]{glmsmurf}}', typically the result of a call to \code{\link{glmsmurf}} or \code{\link{glmsmurf.fit}}.}
 
-\item{...}{Additional arguments for the \code{\link[graphics]{plot}} function.}
+\item{...}{Additional arguments for the \code{\link[graphics:plot.default]{plot}} function.}
 
 \item{xlab}{Label for the x-axis. The default value is \code{NULL} which means that \code{substitute(log(lambda))} is used when \code{log.lambda=TRUE}
 and \code{substitute(lambda)} when \code{log.lambda=FALSE}.}

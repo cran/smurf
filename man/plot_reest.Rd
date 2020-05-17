@@ -19,7 +19,7 @@ plot_reest(x, ...)
 \item{x}{An object for which the extraction of model coefficients is meaningful. 
 E.g. an object of class '\code{\link[=glmsmurf-class]{glmsmurf}}', typically the result of a call to \code{\link{glmsmurf}} or \code{\link{glmsmurf.fit}}.}
 
-\item{...}{Additional arguments for the \code{\link[graphics]{plot}} function.}
+\item{...}{Additional arguments for the \code{\link[graphics:plot.default]{plot}} function.}
 
 \item{xlab}{Label for the x-axis, default is \code{"Index"}.}
 

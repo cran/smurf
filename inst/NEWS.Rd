@@ -2,7 +2,24 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
-\section{Changes in version 1.0.5 (2020-02-12)}{
+
+\section{Changes in version 1.0.6 (2020-05-16)}{
+
+  \subsection{Changes in \code{R}-code:}{
+      \itemize{
+        \item Require at least version \code{4.0} of \pkg{glmnet} as this allows for more families to be used.
+        }
+  }
+  
+  \subsection{Changes in documentation:}{
+      \itemize{
+        \item \code{plot.glmsmurf}, \code{plot_reest.glmsmurf} and \code{plot_lambda.glmsmurf}: Link to \code{plot.default} instead of \code{plot} (\pkg{graphics}) to avoid warnings on R-4.0.0.
+      }
+  }
+}
+
+
+\section{Changes in version 1.0.5 (2020-03-19)}{
 
   \subsection{Changes in \code{R}-code:}{
       \itemize{
@@ -77,7 +94,7 @@
 
   \subsection{Changes in \code{R}-code:}{
     \itemize{
-      \item \code{mtpglm}: Improve handling of coefficient names.
+      \item \code{glmsmurf}: Improve handling of coefficient names.
     }
   }
   
@@ -93,7 +110,7 @@
   \subsection{Changes in \code{R}-code:}{
       \itemize{
         \item \code{p}: change order of \code{group} and \code{refcat} arguments.
-        \item \code{mtpglm}: catch errors when computing the maximum value of lambda (\href{https://gitlab.com/TReynkens/smurf/issues/2}{#2}).
+        \item \code{glmsmurf}: catch errors when computing the maximum value of lambda (\href{https://gitlab.com/TReynkens/smurf/issues/2}{#2}).
         \item Fix bug in standardization when a continuous predictor is penalized with a Lasso or Group Lasso penalty (\href{https://gitlab.com/TReynkens/smurf/issues/4}{#4}).
       }
   }

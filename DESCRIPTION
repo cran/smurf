@@ -1,8 +1,8 @@
 Type: Package
 Package: smurf
 Title: Sparse Multi-Type Regularized Feature Modeling
-Version: 1.0.5
-Date: 2020-03-19
+Version: 1.0.6
+Date: 2020-05-16
 Authors@R: c(
           person("Tom", "Reynkens", email = "tomreynkens@hotmail.com", role = c("aut", "cre"), 
                  comment = c(ORCID = "0000-0002-5516-5107")),
@@ -14,8 +14,9 @@ URL: https://gitlab.com/TReynkens/smurf
 License: GPL (>= 2)
 BugReports: https://gitlab.com/TReynkens/smurf/issues
 Depends: R (>= 3.1)
-Imports: catdata, glmnet, graphics, MASS, Matrix, methods, mgcv,
-        parallel, RColorBrewer, Rcpp (>= 0.12.12), speedglm, stats
+Imports: catdata, glmnet (>= 4.0), graphics, MASS, Matrix, methods,
+        mgcv, parallel, RColorBrewer, Rcpp (>= 0.12.12), speedglm,
+        stats
 Suggests: bookdown, knitr, roxygen2 (>= 6.0.0), testthat
 LinkingTo: Rcpp, RcppArmadillo (>= 0.8.300.1.0)
 VignetteBuilder: knitr
@@ -24,10 +25,10 @@ Encoding: UTF-8
 LazyData: yes
 NeedsCompilation: yes
 RoxygenNote: 7.1.0
-Packaged: 2020-03-19 13:20:10 UTC; tom
+Packaged: 2020-05-16 07:37:43 UTC; tom
 Author: Tom Reynkens [aut, cre] (<https://orcid.org/0000-0002-5516-5107>),
   Sander Devriendt [aut],
   Katrien Antonio [aut]
 Maintainer: Tom Reynkens <tomreynkens@hotmail.com>
 Repository: CRAN
-Date/Publication: 2020-03-19 14:30:05 UTC
+Date/Publication: 2020-05-17 01:30:06 UTC

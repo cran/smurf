@@ -22,7 +22,7 @@
 #' @param cv1se Logical indicating if the standard errors should be indicated on the plot 
 #'               when cross-validation with the one standard error rule is performed (e.g. "cv1se.dev"). Default is \code{TRUE}.            
 #' @param log.lambda Logical indicating if the logarithm of lambda is plotted on the x-axis, default is \code{TRUE}.
-#' @param ... Additional arguments for the \code{\link[graphics]{plot}} function.
+#' @param ... Additional arguments for the \code{\link[graphics:plot.default]{plot}} function.
 #' 
 #' @details This plot can only be made when lambda is selected in-sample, out-of-sample or using cross-validation (possibly with the one standard error rule), 
 #'          see the \code{lambda} argument of \code{\link{glmsmurf}}.

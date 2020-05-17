@@ -15,7 +15,7 @@
 
 \item{basic}{Logical indicating if the basic lay-out is used for the plot, default is \code{FALSE}.}
 
-\item{...}{Additional arguments for the \code{\link[graphics]{plot}} function.}
+\item{...}{Additional arguments for the \code{\link[graphics:plot.default]{plot}} function.}
 }
 \description{
 Function to plot the coefficients of the estimated model.
