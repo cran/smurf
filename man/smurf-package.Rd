@@ -12,7 +12,7 @@ Implementation of the SMuRF algorithm of Devriendt et al. (2018) <arXiv:1810.031
 Useful links:
 \itemize{
   \item \url{https://gitlab.com/TReynkens/smurf}
-  \item Report bugs at \url{https://gitlab.com/TReynkens/smurf/issues}
+  \item Report bugs at \url{https://gitlab.com/TReynkens/smurf/-/issues}
 }
 
 }

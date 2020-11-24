@@ -3,6 +3,18 @@
 \encoding{UTF-8}
 
 
+\section{Changes in version 1.0.7 (2020-11-24)}{
+
+  \subsection{Changes in \code{R}-code:}{
+      \itemize{
+        \item \code{plot_lambda}: Properly check whether the object \code{x} of class \code{glmsmurf} contains components related to the selection of the sparsity parameter \code{lambda}.
+        \item Use named families for \pkg{glmnet} whenever possible as this is faster.
+        }
+  }
+  
+}
+
+
 \section{Changes in version 1.0.6 (2020-05-16)}{
 
   \subsection{Changes in \code{R}-code:}{
@@ -110,8 +122,8 @@
   \subsection{Changes in \code{R}-code:}{
       \itemize{
         \item \code{p}: change order of \code{group} and \code{refcat} arguments.
-        \item \code{glmsmurf}: catch errors when computing the maximum value of lambda (\href{https://gitlab.com/TReynkens/smurf/issues/2}{#2}).
-        \item Fix bug in standardization when a continuous predictor is penalized with a Lasso or Group Lasso penalty (\href{https://gitlab.com/TReynkens/smurf/issues/4}{#4}).
+        \item \code{glmsmurf}: catch errors when computing the maximum value of lambda (\href{https://gitlab.com/TReynkens/smurf/-/issues/2}{#2}).
+        \item Fix bug in standardization when a continuous predictor is penalized with a Lasso or Group Lasso penalty (\href{https://gitlab.com/TReynkens/smurf/-/issues/4}{#4}).
       }
   }
   

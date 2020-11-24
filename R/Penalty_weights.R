@@ -173,9 +173,20 @@
           
         } else {
           
+          
+          family_glmnet <- family
+          
+          # Use named families for glmnet whenever possible as this is faster
+          if ((family$family == "binomial" & family$link == "logit") | 
+              (family$family == "gaussian" & family$link == "identity") |
+              (family$family == "poisson" & family$link == "log")) {
+            family_glmnet <- family$family
+          }
+          
+          
           # Compute GLM coefficients using GLM with small ridge penalty (alpha=0) to avoid problems with multicollinearity
           # Do not include column for intercept
-          glm.fit <- glmnet(y = y, x = X[, -1L], family = family$family, weights = weights, offset = offset,
+          glm.fit <- glmnet(y = y, x = X[, -1L], family = family_glmnet, weights = weights, offset = offset,
                             nlambda = 2, alpha = 0, intercept = TRUE, standardize = FALSE)
           # Use coefficients obtained with smallest lambda and add fitted intercept
           beta.weights <- c(glm.fit$a0[2L], glm.fit$beta[, 2L])

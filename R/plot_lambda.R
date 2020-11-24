@@ -37,7 +37,7 @@ plot_lambda <- function(x, ...) UseMethod("plot_lambda", x)
 plot_lambda.glmsmurf <- function(x, xlab = NULL, ylab = NULL, lambda.opt = TRUE, cv1se = TRUE, log.lambda = TRUE, ...) {
   
   # Check if wanted objects exist
-  if (exists(c("lambda.vector", "lambda.method", "lambda.measures"), where = x)) {
+  if (all(sapply(c("lambda.vector", "lambda.method", "lambda.measures"), exists, where = x))) {
     
     # Name of method used to select lambda
     lambda.method = x$lambda.method
