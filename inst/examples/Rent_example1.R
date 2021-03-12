@@ -56,7 +56,7 @@ formu <- rentm ~ p(area, pen = "gflasso") +
 # The value for lambda is selected using cross-validation 
 # (with the deviance as loss measure and the one standard error rule), see example(plot_lambda) 
 munich.fit <- glmsmurf(formula = formu, family = gaussian(), data = rent, 
-                       pen.weights = "glm.stand", lambda = 0.008914)
+                       pen.weights = "glm.stand", lambda = 0.02)
 
 
 ####

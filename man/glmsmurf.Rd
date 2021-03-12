@@ -214,7 +214,7 @@ formu <- rentm ~ p(area, pen = "gflasso") +
 # The value for lambda is selected using cross-validation 
 # (with the deviance as loss measure and the one standard error rule), see example(plot_lambda) 
 munich.fit <- glmsmurf(formula = formu, family = gaussian(), data = rent, 
-                       pen.weights = "glm.stand", lambda = 0.008914)
+                       pen.weights = "glm.stand", lambda = 0.02)
 
 
 ####
@@ -261,7 +261,7 @@ residuals(munich.fit, type = "deviance")
 residuals_reest(munich.fit, type = "deviance")
 }
 \references{
-Devriendt, S., Antonio, K., Reynkens, T. and Verbelen, R. (2018). "Sparse Regression with Multi-type Regularized Feature Modeling." \emph{arXiv:1810.03136}.
+Devriendt, S., Antonio, K., Reynkens, T. and Verbelen, R. (2021). "Sparse Regression with Multi-type Regularized Feature Modeling", Insurance: Mathematics and Economics, 96, 248--261. <doi:10.1016/j.insmatheco.2020.11.010>.
 
 Hastie, T., Tibshirani, R., and Wainwright, M. (2015). \emph{Statistical Learning with Sparsity: The Lasso and Generalizations}. CRC Press.
 }

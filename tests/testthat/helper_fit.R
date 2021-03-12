@@ -45,19 +45,19 @@ formu <- rentm ~ p(area, pen = "gflasso", refcat = 3) +
 # The value for lambda is selected using cross-validation
 # (with MSE as measure), see example(plot_lambda)
 munich.fit <- glmsmurf(formu, family = gaussian(), data = rent,
-                       pen.weights = "glm.stand", lambda = 0.008914, 
+                       pen.weights = "glm.stand", lambda = 0.01404071, 
                        control = list(eps = 1e-5), x.return = TRUE, pen.weights.return = TRUE)
 
 # No re-estimation
 munich.fit2 <- glmsmurf(formu, family = gaussian(), data = rent,
-                        pen.weights = "glm.stand", lambda = 0.008914, 
+                        pen.weights = "glm.stand", lambda = 0.01404071, 
                         control = list(reest = FALSE, eps = 1e-5))
 
 
 # With 2D effect
 formu3 <- update(formu, "~ . + p(quality, bathextra, pen = \"2dflasso\")")
 munich.fit3 <- glmsmurf(formu3, family = gaussian(), data = rent,
-                        pen.weights = "glm.stand", lambda = 0.008914, 
+                        pen.weights = "glm.stand", lambda = 0.01404071, 
                         control = list(eps = 1e-5), x.return = TRUE)
 
 
@@ -122,5 +122,5 @@ formu4 <- rentm ~ p(area, pen = "ggflasso") +
   p(kitchen, pen = "lasso") 
 
 munich.fit4 <- glmsmurf(formula = formu4, family = gaussian(), data = rent, 
-                        pen.weights = "glm.stand", lambda = 0.041787, 
+                        pen.weights = "glm.stand", lambda = 0.048423, 
                         adj.matrix = list(area = munich_adj), x.return = TRUE)

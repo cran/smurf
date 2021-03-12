@@ -240,7 +240,7 @@ Next, we fit a multi-type regularized GLM, where we use standardization adaptive
 We predetermined the value for lambda using cross-validation (with the deviance as loss measure and the one standard error rule), see [Selection of lambda](#selection-of-lambda).
 ```{r, warning = FALSE}
 munich.fit <- glmsmurf(formula = formu, family = gaussian(), data = rent, 
-                       pen.weights = "glm.stand", lambda = 0.008914)
+                       pen.weights = "glm.stand", lambda = 0.01404071)
 ```
 
 # Output
@@ -356,7 +356,7 @@ You can also add standard plotting arguments to the `plot_lambda` function to ad
 
 ```{r, eval = FALSE}
 # Zoomed plot
-plot_lambda(munich.fit.cv, xlim = c(-8, -4), ylim = c(1550, 1750))
+plot_lambda(munich.fit.cv, xlim = c(-7, -3.5), ylim = c(1575, 1750))
 ```
 ```{r fig2, echo = FALSE, out.width = "545px"}
 knitr::include_graphics("Plot_lambda2.png")
@@ -413,7 +413,7 @@ formu2 <- rentm ~ p(area, pen = "ggflasso") +
                   p(kitchen, pen = "lasso") 
 
 munich.fit2 <- glmsmurf(formula = formu2, family = gaussian(), data = rent, 
-                        pen.weights = "glm.stand", lambda = 0.041787, 
+                        pen.weights = "glm.stand", lambda = 0.048423, 
                         adj.matrix = list(area = munich_adj))
 ```
 Using a neighbor based Graph-Guided Fused Lasso penalty has the downside that only an uninterrupted cluster of levels (areas here) can be fused together. This is not always the desired behavior as e.g. suburban areas with a similar rent profile might not lie close to each other and might therefore not be fused. However, the user is free to base the Graph-Guided Fused Lasso penalty on other similarities than spatial neighbors. For example, regions with similar socio-economic status or education levels can be defined as neighbors.

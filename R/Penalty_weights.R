@@ -155,12 +155,15 @@
       
       if (pen.weights.type %in% c("glm", "glm.stand")) {
         
-        # Check if full rank: this is not the case when Lasso or Group Lasso penalties are present or 
-        # when Fused Lasso, Generalized Fused Lasso or Graph-Guided Fused Lasso penalties are present 
-        # without reference category (i.e. lambda1>0 or lambda2>0)
-        fullRank <- !(any(pen.cov %in% c("lasso", "grouplasso")) | 
-                        (!refcat & any(pen.cov %in% c("flasso", "gflasso", "ggflasso"))))
-        
+        # Determine which variables are non-continuous and have a Lasso or Group Lasso penalty,
+        # or have a Fused Lasso, Generalized Fused Lasso or Graph-Guided Fused Lasso penalty
+        # without reference category (i.e. lambda1>0 or lambda2>0).
+        # penalty.factor is needed for glmnet (when fullRank=FALSE)
+        penalty.factor <- ((as.character(rep(pen.cov, n.par.cov)) %in% c("lasso", "grouplasso")) & apply(X, 2, function(x) length(unique(x)) == 2L)) |       
+                              (!refcat & (as.character(rep(pen.cov, n.par.cov)) %in% c("flasso", "gflasso", "ggflasso")))
+        # The design matrix does not have full rank when such variables are present
+        fullRank <- !any(penalty.factor)
+
         if (fullRank) {
           
           # Compute GLM coefficients used for penalty weights
@@ -186,8 +189,11 @@
           
           # Compute GLM coefficients using GLM with small ridge penalty (alpha=0) to avoid problems with multicollinearity
           # Do not include column for intercept
-          glm.fit <- glmnet(y = y, x = X[, -1L], family = family_glmnet, weights = weights, offset = offset,
-                            nlambda = 2, alpha = 0, intercept = TRUE, standardize = FALSE)
+          # Ridge penalty needs to be applied if penalty is Lasso or Group Lasso for a non-continuous variable,
+          # or for variables with a Fused Lasso, Generalized Fused Lasso or Graph-Guided Fused Lasso penalty without reference category (i.e. lambda1>0 or lambda2>0).
+          glm.fit <- glmnet(y = y, x = X[, -which(tolower(colnames(X)) == "intercept")], family = family_glmnet, weights = weights, offset = offset,
+                            nlambda = 2, alpha = 0, intercept = TRUE, standardize = FALSE,
+                            penalty.factor = penalty.factor[-which(tolower(names(penalty.factor)) == "intercept")] * 1)
           # Use coefficients obtained with smallest lambda and add fitted intercept
           beta.weights <- c(glm.fit$a0[2L], glm.fit$beta[, 2L])
           names(beta.weights)[1] <- colnames(X)[1]

@@ -3,6 +3,28 @@
 \encoding{UTF-8}
 
 
+
+
+\section{Changes in version 1.1.0 (2021-03-12)}{
+
+  \subsection{Major changes}{
+    \itemize{
+      \item Only apply ridge penalty to relevant predictors when determining GLM penalty weights.
+      \item Correctly determine if the design matrix has full rank.
+      \item Optimal values of \code{lambda}, in examples and vignette, are re-determined after changes in computation of GLM penalty weights.
+      \item Use \code{C++14} (instead of \code{C++11}) which requires \code{R} version 3.4 or higher.
+      }
+  }
+
+  
+  \subsection{Minor changes:}{
+    \itemize{
+      \item \code{glmsmurf}: Check that factors have at least two levels.
+      \item Update Devriendt et al. (2021) reference.
+    }
+  }
+}
+
 \section{Changes in version 1.0.7 (2020-11-24)}{
 
   \subsection{Changes in \code{R}-code:}{
@@ -11,7 +33,6 @@
         \item Use named families for \pkg{glmnet} whenever possible as this is faster.
         }
   }
-  
 }
 
 

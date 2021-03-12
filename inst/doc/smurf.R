@@ -57,7 +57,7 @@ formu <- rentm ~ p(area, pen = "gflasso") +
 
 ## ---- warning = FALSE---------------------------------------------------------
 munich.fit <- glmsmurf(formula = formu, family = gaussian(), data = rent, 
-                       pen.weights = "glm.stand", lambda = 0.008914)
+                       pen.weights = "glm.stand", lambda = 0.01404071)
 
 ## ---- warning = FALSE---------------------------------------------------------
 plot(munich.fit)
@@ -82,7 +82,7 @@ knitr::include_graphics("Plot_lambda1.png")
 
 ## ---- eval = FALSE------------------------------------------------------------
 #  # Zoomed plot
-#  plot_lambda(munich.fit.cv, xlim = c(-8, -4), ylim = c(1550, 1750))
+#  plot_lambda(munich.fit.cv, xlim = c(-7, -3.5), ylim = c(1575, 1750))
 
 ## ----fig2, echo = FALSE, out.width = "545px"----------------------------------
 knitr::include_graphics("Plot_lambda2.png")
@@ -125,6 +125,6 @@ knitr::include_graphics("Plot_lambda2.png")
 #                    p(kitchen, pen = "lasso")
 #  
 #  munich.fit2 <- glmsmurf(formula = formu2, family = gaussian(), data = rent,
-#                          pen.weights = "glm.stand", lambda = 0.041787,
+#                          pen.weights = "glm.stand", lambda = 0.048423,
 #                          adj.matrix = list(area = munich_adj))
 

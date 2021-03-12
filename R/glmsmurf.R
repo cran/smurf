@@ -78,7 +78,7 @@
 #'          
 #' @seealso \code{\link{glmsmurf-class}}, \code{\link{glmsmurf.control}}, \code{\link{p}}, \code{\link[stats]{glm}}
 #' 
-#' @references Devriendt, S., Antonio, K., Reynkens, T. and Verbelen, R. (2018). "Sparse Regression with Multi-type Regularized Feature Modeling." \emph{arXiv:1810.03136}.
+#' @references Devriendt, S., Antonio, K., Reynkens, T. and Verbelen, R. (2021). "Sparse Regression with Multi-type Regularized Feature Modeling", Insurance: Mathematics and Economics, 96, 248--261. <doi:10.1016/j.insmatheco.2020.11.010>.
 #' 
 #' Hastie, T., Tibshirani, R., and Wainwright, M. (2015). \emph{Statistical Learning with Sparsity: The Lasso and Generalizations}. CRC Press.
 #' @example /inst/examples/Rent_example1.R
@@ -218,12 +218,19 @@ glmsmurf <- function(formula, family, data, weights, start, offset, lambda, lamb
     }
     
     
-    # Check for unused factor levels
     if (is.factor(mf_nodrop[, j])) {
+      
+      # Check for unused factor levels
       if (!isTRUE(all.equal(levels(mf_nodrop[, j]), levels(mf[, j])))) {
         stop(paste0("No unused levels can be present in the predictor '", cov.names[j + (inter - 1)],"'.",
                     " Please remove the unused factor levels."))
       }
+      
+      # Check that a factor has at least two levels
+      if (length(levels(mf_nodrop[, j])) < 2L) {
+        stop(paste0("Predictor '", cov.names[j + (inter - 1)]," needs to have at least 2 levels."))
+      }
+      
     }
     
     ####

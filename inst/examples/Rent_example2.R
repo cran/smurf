@@ -56,14 +56,14 @@ formu <- rentm ~ p(area, pen = "gflasso") +
 # using cross-validation (with the deviance as loss measure and the one standard error rule).
 # We use standardization adaptive penalty weights based on an initial GLM fit.
 # The number of values of lambda to consider in cross-validation is
-# set to 25 using the control argument (default is 50).
+# set to 10 using the control argument (default is 50).
 munich.fit.cv <- glmsmurf(formula = formu, family = gaussian(), data = rent, 
                           pen.weights = "glm.stand", lambda = "cv1se.dev",
-                          control = list(lambda.length = 25L, ncores = 1L))
+                          control = list(lambda.length = 10L, ncores = 1L))
 
 
 # Plot average deviance over cross-validation folds as a function of the logarithm of lambda
 plot_lambda(munich.fit.cv)
 # Zoomed plot
-plot_lambda(munich.fit.cv, xlim = c(-8, -4), ylim = c(1550, 1750))
+plot_lambda(munich.fit.cv, xlim = c(-7, -3.5), ylim = c(1575, 1750))
 }
