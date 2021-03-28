@@ -3,6 +3,12 @@
 \encoding{UTF-8}
 
 
+\section{Changes in version 1.1.1 (2021-03-26)}{
+
+    \itemize{
+      \item Remove 'LazyData' from \code{DESCRIPTION} file as no data directory is present.
+      }
+}
 
 
 \section{Changes in version 1.1.0 (2021-03-12)}{
