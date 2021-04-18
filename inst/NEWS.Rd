@@ -3,6 +3,13 @@
 \encoding{UTF-8}
 
 
+\section{Changes in version 1.1.2 (2021-04-17)}{
+
+    \itemize{
+      \item Add \pkg{rmarkdown} to the Suggests field in the \code{DESCRIPTION} file to avoid problems with \pkg{knitr} version >= 1.32.
+      }
+}
+
 \section{Changes in version 1.1.1 (2021-03-26)}{
 
     \itemize{
