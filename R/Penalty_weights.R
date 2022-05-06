@@ -163,13 +163,13 @@
                               (!refcat & (as.character(rep(pen.cov, n.par.cov)) %in% c("flasso", "gflasso", "ggflasso")))
         # The design matrix does not have full rank when such variables are present
         fullRank <- !any(penalty.factor)
-
+        
         if (fullRank) {
           
           # Compute GLM coefficients used for penalty weights
           glm.fit <- speedglm.wfit(y = y, X = X, intercept = TRUE, family = family, weights = weights, offset = offset,
                                    start = NULL, eigendec = FALSE, 
-                                   sparse = ifelse(class(X)[1] %in% c("dgCMatrix"), TRUE, NULL), 
+                                   sparse = (if(class(X)[1] %in% c("dgCMatrix")) TRUE else NULL), 
                                    trace = FALSE)
           
           beta.weights <- glm.fit$coefficients

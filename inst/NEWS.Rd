@@ -3,6 +3,14 @@
 \encoding{UTF-8}
 
 
+\section{Changes in version 1.1.3 (2022-05-06)}{
+
+    \itemize{
+      \item Fix bug with \code{ifelse} and \code{NULL} when computing GLM penalty weights for a design matrix with full rank (\href{https://gitlab.com/TReynkens/smurf/-/issues/7}{#7}).
+      }
+}
+
+
 \section{Changes in version 1.1.2 (2021-04-17)}{
 
     \itemize{

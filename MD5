@@ -1,11 +1,11 @@
-c87b423ebac2daece80f92b9d232b2ee *DESCRIPTION
+2456fbb3f8a7fede7b090bbb32a1c99b *DESCRIPTION
 41e3e743d7bb92856da794662555e316 *NAMESPACE
 16f180fbf0d80c4e4c22f3780f911b92 *R/Lambda_max.R
 2ee0d0b8ecdde5b7b6f244a6a8e4cf42 *R/Lambda_select.R
 fc2baba6f17b87e0e9e427f20a8ea7df *R/PO.R
 2193da80cc759fc8cf48508df0d456b1 *R/Penalty.R
 ddf976a889c7247542e511e993981880 *R/Penalty_matrices.R
-ec8718ce5d70fbc697364573a37ffd10 *R/Penalty_weights.R
+80619a8adafcd0a8fb66cf8c74e709e4 *R/Penalty_weights.R
 4638d6514e858bf933a7819bc12acfe1 *R/Penalty_weights_GAM.R
 b8ea4f4ea8d0e24c1bda3c96330cad34 *R/RcppExports.R
 e2a2634f4516302dddccc6f958a1c8ed *R/check_input.R
@@ -26,11 +26,11 @@ c6e867a5022de5aae95d3fbbfa9f99b3 *R/plot_lambda.R
 1b142dfd69558409c26885d39baac99a *R/smurf.R
 a5050cdc9296ff85d6b8a945de37b391 *R/stand.R
 606b32d7a1064fba7bb0627120af0aba *R/summary.R
-fc4c8d8c36183ebdc3b1df35140f56cc *build/vignette.rds
-d8641f3f8b50d50cbc0ee2fc4aa56da9 *inst/NEWS.Rd
+0ea3da417b9c7c03c5aebe07194ca2a9 *build/vignette.rds
+5f387915f4ea8698135756440b563bf3 *inst/NEWS.Rd
 0241b95569adea1e130fbe189141820d *inst/doc/smurf.R
 8659b842ef6a582e332bc4b5585fc887 *inst/doc/smurf.Rmd
-beba44495f64f71b99c0d84e9c6ac923 *inst/doc/smurf.html
+703c0037b6cc4d09e73d04975b526dec *inst/doc/smurf.html
 1bdc8aff239ce20bddffcf4ace4fcd4d *inst/examples/Rent_example1.R
 e4ae6a4420dafdbd034abd29615c880e *inst/examples/Rent_example2.R
 17e60caac5b1080aa1656b962c3e7327 *inst/examples/Rent_example3.R
@@ -56,7 +56,7 @@ be8b7e45ba87783603d95a6d622548e6 *man/predict.glmsmurf.Rd
 8f3d5ceb7e7b3c0d1206b500b518c2ed *src/Makevars
 8f3d5ceb7e7b3c0d1206b500b518c2ed *src/Makevars.win
 f5fc817d7487d36ad8691bb4ff2c5aa0 *src/Penalty_PO.cpp
-7e09846a31e2b6f3919989ea866385f4 *src/RcppExports.cpp
+8df88c6bea5bfe8a95ccc101c3e4f0f6 *src/RcppExports.cpp
 3ed77065fb52ac4fd66546c321d51c67 *tests/testthat.R
 48e94aaae3818fab9aa3cedf6bd60903 *tests/testthat/helper_fit.R
 7ebea9f69ca9abc77f59693f44b80d7c *tests/testthat/test_PO.R

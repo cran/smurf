@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // admm_po_cpp
 arma::vec admm_po_cpp(const arma::vec& beta_tilde, const double slambda, const arma::vec& lambda1, const double lambda2, const arma::mat& penmat, const arma::mat& Q, const arma::vec& eigval, const bool fast, const int maxiter, double rho, const arma::vec& beta_old);
 RcppExport SEXP _smurf_admm_po_cpp(SEXP beta_tildeSEXP, SEXP slambdaSEXP, SEXP lambda1SEXP, SEXP lambda2SEXP, SEXP penmatSEXP, SEXP QSEXP, SEXP eigvalSEXP, SEXP fastSEXP, SEXP maxiterSEXP, SEXP rhoSEXP, SEXP beta_oldSEXP) {
