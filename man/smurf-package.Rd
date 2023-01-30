@@ -6,7 +6,7 @@
 \alias{smurf-package}
 \title{smurf: Sparse Multi-Type Regularized Feature Modeling}
 \description{
-Implementation of the SMuRF algorithm of Devriendt et al. (2021) <doi:10.1016/j.insmatheco.2020.11.010> to fit generalized linear models (GLMs) with multiple types of predictors via regularized maximum likelihood.
+Implementation of the SMuRF algorithm of Devriendt et al. (2021) \doi{10.1016/j.insmatheco.2020.11.010} to fit generalized linear models (GLMs) with multiple types of predictors via regularized maximum likelihood.
 }
 \seealso{
 Useful links:

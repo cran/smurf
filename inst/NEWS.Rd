@@ -3,6 +3,14 @@
 \encoding{UTF-8}
 
 
+\section{Changes in version 1.1.4 (2023-01-30)}{
+
+    \itemize{
+      \item Change \code{C++} standard from \code{C++14} to \code{C++17} (default for \code{R 4.3.0}).
+      }
+}
+
+
 \section{Changes in version 1.1.3 (2022-05-06)}{
 
     \itemize{
