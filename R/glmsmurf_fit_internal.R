@@ -210,21 +210,11 @@
       X.transform[which(beta.new2 == par), i] <- 1
     }
     
-    if (length(beta.reduced) > 1) {
-      # Combine covariates into the groups and convert to sparse matrix
-      model.matrix.reest <- Matrix(X %*% X.transform, sparse = TRUE)
-      # Re-estimate model using groups, use speedglm.wfit 
-      glm.reest <- speedglm.wfit(y = y, X = model.matrix.reest, intercept = TRUE, family = family, 
-                                 start = NULL, offset = offset, weights = weights,
-                                 sparse = TRUE, trace = FALSE)
-    } else {
-      # Only intercept is present, use glm.fit function from "stats" to avoid problems
-      # Combine covariates into the groups
-      model.matrix.reest <- as.matrix(X %*% X.transform)
-      # Re-estimate model using groups, use glm.fit 
-      glm.reest <- glm.fit(y = y, x = model.matrix.reest, intercept = TRUE, family = family, 
-                           start = NULL, offset = offset, weights = weights)
-    }
+    # Combine covariates into the groups
+    model.matrix.reest <- as.matrix(X %*% X.transform)
+    # Re-estimate model using groups, use glm.fit 
+    glm.reest <- glm.fit(y = y, x = model.matrix.reest, intercept = TRUE, family = family, 
+                         start = NULL, offset = offset, weights = weights)
     
     # Re-estimated coefficients per group
     beta.reest <- glm.reest$coefficients

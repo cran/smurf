@@ -43,8 +43,6 @@
 #' 
 #' @importFrom RColorBrewer brewer.pal
 #' 
-#' @importFrom speedglm speedglm.wfit
-#' 
 #' @importFrom stats as.formula
 #' @importFrom stats contrasts
 #' @importFrom stats coef

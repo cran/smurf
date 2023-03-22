@@ -2,6 +2,12 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+\section{Changes in version 1.1.5 (2023-03-22)}{
+
+    \itemize{
+      \item Remove dependency on \pkg{speedglm} as this package will be removed from CRAN on 31st March 2023.
+      }
+}
 
 \section{Changes in version 1.1.4 (2023-01-30)}{
 

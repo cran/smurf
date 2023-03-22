@@ -32,7 +32,7 @@ glmsmurf.control(
 
 \item{tau}{Parameter for backtracking the step size. A numeric strictly between 0 and 1, default is 0.5.}
 
-\item{reest}{A logical indicating if the obtained (reduced) model is re-estimated using \code{\link[speedglm]{speedglm}} or \code{\link[stats]{glm}}. Default is \code{TRUE}.}
+\item{reest}{A logical indicating if the obtained (reduced) model is re-estimated using \code{\link[stats]{glm}}. Default is \code{TRUE}.}
 
 \item{lambda.vector}{Values of lambda to consider when selecting the optimal value of lambda. A vector of strictly positive numerics (which is preferably a decreasing sequence as we make use of warm starts) or \code{NULL} (default).
 When \code{NULL}, it is set to an exponential decreasing sequence of length \code{lambda.length} between \code{lambda.max} and \code{lambda.min}.}

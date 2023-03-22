@@ -16,7 +16,7 @@
 #' @param maxiter Maximum number of iterations of the SMuRF algorithm. A numeric larger than or equal to 1, default is \code{10 000}.
 #' @param step Initial step size, a numeric strictly larger than 0 or \code{NULL}. When \code{NULL} (default), it is equal to \code{0.1} times the sample size.
 #' @param tau Parameter for backtracking the step size. A numeric strictly between 0 and 1, default is 0.5.
-#' @param reest A logical indicating if the obtained (reduced) model is re-estimated using \code{\link[speedglm]{speedglm}} or \code{\link[stats]{glm}}. Default is \code{TRUE}.
+#' @param reest A logical indicating if the obtained (reduced) model is re-estimated using \code{\link[stats]{glm}}. Default is \code{TRUE}.
 #' @param lambda.vector Values of lambda to consider when selecting the optimal value of lambda. A vector of strictly positive numerics (which is preferably a decreasing sequence as we make use of warm starts) or \code{NULL} (default).
 #' When \code{NULL}, it is set to an exponential decreasing sequence of length \code{lambda.length} between \code{lambda.max} and \code{lambda.min}.
 #' @param lambda.min Minimum value of lambda to consider when selecting the optimal value of lambda. A strictly positive numeric or \code{NULL} (default).

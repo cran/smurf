@@ -165,15 +165,13 @@
         fullRank <- !any(penalty.factor)
         
         if (fullRank) {
-          
+
           # Compute GLM coefficients used for penalty weights
-          glm.fit <- speedglm.wfit(y = y, X = X, intercept = TRUE, family = family, weights = weights, offset = offset,
-                                   start = NULL, eigendec = FALSE, 
-                                   sparse = (if(class(X)[1] %in% c("dgCMatrix")) TRUE else NULL), 
-                                   trace = FALSE)
-          
+          glm.fit <- glm.fit(y = y, x = X, intercept = TRUE, family = family, weights = weights, 
+                             offset = offset, start = NULL)
+
           beta.weights <- glm.fit$coefficients
-          
+
         } else {
           
           

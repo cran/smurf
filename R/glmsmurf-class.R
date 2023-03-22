@@ -46,7 +46,7 @@
 #'   \item{pen.weights}{List with the vector of penalty weights per predictor (covariate), only returned when the argument \code{pen.weights.return} in \code{\link{glmsmurf}} or \code{\link{glmsmurf.fit}} is \code{TRUE}.} 
 #' When the model is re-estimated, i.e. \code{reest = TRUE} in \code{\link{glmsmurf.control}}, 
 #' the following components are also present:
-#'   \item{glm.reest}{Output from the call to \code{\link[speedglm]{speedglm}} or \code{\link[stats]{glm}} to fit the re-estimated model.}
+#'   \item{glm.reest}{Output from the call to \code{\link[stats]{glm}} to fit the re-estimated model.}
 #'   \item{coefficients.reest}{Coefficients of the re-estimated model.}
 #'   \item{residuals.reest}{Working residuals of the re-estimated model.}
 #'   \item{fitted.values.reest}{Fitted mean values of the re-estimated model.}
