@@ -2,6 +2,15 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+
+\section{Changes in version 1.1.6 (2024-11-30)}{
+
+    \itemize{
+      \item Change maintainer email address.
+      }
+}
+
+
 \section{Changes in version 1.1.5 (2023-03-22)}{
 
     \itemize{
