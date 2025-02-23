@@ -2,6 +2,12 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+\section{Changes in version 1.1.7 (2025-02-23)}{
+
+    \itemize{
+      \item Fix bug in test.
+      }
+}
 
 \section{Changes in version 1.1.6 (2024-11-30)}{
 

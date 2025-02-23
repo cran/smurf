@@ -320,7 +320,7 @@ test_that("Test n.par.cov in output", {
   expect_true(all(sapply(munich.fit$n.par.cov, length) == 1L))
   
   # Check if all strictly positive
-  expect_true(all(unlist(munich.fit$n.par.cov, length) > 0))
+  expect_true(all(unlist(munich.fit$n.par.cov) > 0))
   
   # Check if all integers
   expect_true(all(sapply(munich.fit$n.par.cov, .is.wholenumber)))

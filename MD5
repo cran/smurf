@@ -1,4 +1,4 @@
-4596883654eb426294b59205d611ba98 *DESCRIPTION
+5d5e673b7501ad335396648ee1d0d0a1 *DESCRIPTION
 0b33217be58788f36540297ea76a6160 *NAMESPACE
 16f180fbf0d80c4e4c22f3780f911b92 *R/Lambda_max.R
 2ee0d0b8ecdde5b7b6f244a6a8e4cf42 *R/Lambda_select.R
@@ -28,10 +28,10 @@ a5050cdc9296ff85d6b8a945de37b391 *R/stand.R
 606b32d7a1064fba7bb0627120af0aba *R/summary.R
 1dda19015f0aa969acee990c150e3ac9 *build/partial.rdb
 1886fd55e82b3c3265452972121f60b3 *build/vignette.rds
-efb76ade884227ea9896cc6a73bfe648 *inst/NEWS.Rd
+0ac56587065cd395008522536841446b *inst/NEWS.Rd
 039508c4f05f6e42a8652fea36284565 *inst/doc/smurf.R
 8659b842ef6a582e332bc4b5585fc887 *inst/doc/smurf.Rmd
-3db8fcfac65f6cd17e6bdce02e778f8d *inst/doc/smurf.html
+8fda635ec22ce85abefba204f2ffff15 *inst/doc/smurf.html
 1bdc8aff239ce20bddffcf4ace4fcd4d *inst/examples/Rent_example1.R
 e4ae6a4420dafdbd034abd29615c880e *inst/examples/Rent_example2.R
 17e60caac5b1080aa1656b962c3e7327 *inst/examples/Rent_example3.R
@@ -65,7 +65,7 @@ f5fc817d7487d36ad8691bb4ff2c5aa0 *src/Penalty_PO.cpp
 3f261e12d612d9907f39080b63046840 *tests/testthat/test_control.R
 5d9f0c493a4a553321abf23ef580cc9e *tests/testthat/test_general.R
 54fb1897b197a77cfbaa12fff5788e93 *tests/testthat/test_input.R
-8966340e9e9047e88389704275969f46 *tests/testthat/test_output.R
+781bf6f7ccf93de1f35d873eb90afe56 *tests/testthat/test_output.R
 c7fa2c84d40d25dc8ff27818515ee6e0 *tests/testthat/test_p.R
 705652c8c42bb7899340f9f63c6be4bb *tests/testthat/test_penaltymat.R
 93e7e6ce2529d256dc40ac2dcc548793 *vignettes/Plot_lambda1.png
