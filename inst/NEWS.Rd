@@ -2,6 +2,13 @@
 \title{News for package \pkg{smurf}}
 \encoding{UTF-8}
 
+\section{Changes in version 1.1.8 (2025-09-19)}{
+
+    \itemize{
+      \item Add extra compiler flag for \code{Armadillo} version >= \code{15.0.0-1}.
+      }
+}
+
 \section{Changes in version 1.1.7 (2025-02-23)}{
 
     \itemize{

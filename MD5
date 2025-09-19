@@ -1,4 +1,4 @@
-5d5e673b7501ad335396648ee1d0d0a1 *DESCRIPTION
+02bf436fcc2551e19a02e41b12eb4fd2 *DESCRIPTION
 0b33217be58788f36540297ea76a6160 *NAMESPACE
 16f180fbf0d80c4e4c22f3780f911b92 *R/Lambda_max.R
 2ee0d0b8ecdde5b7b6f244a6a8e4cf42 *R/Lambda_select.R
@@ -26,12 +26,12 @@ c6e867a5022de5aae95d3fbbfa9f99b3 *R/plot_lambda.R
 3676175e064c8def298a3674f06b4486 *R/smurf.R
 a5050cdc9296ff85d6b8a945de37b391 *R/stand.R
 606b32d7a1064fba7bb0627120af0aba *R/summary.R
-1dda19015f0aa969acee990c150e3ac9 *build/partial.rdb
-1886fd55e82b3c3265452972121f60b3 *build/vignette.rds
-0ac56587065cd395008522536841446b *inst/NEWS.Rd
+9d40159f50a5fc9949cbfe95a2884126 *build/partial.rdb
+b7b94c91a4ab792a0b381ca03f239eae *build/vignette.rds
+3579ff0a85d25890b15eaf2cc5ca8710 *inst/NEWS.Rd
 039508c4f05f6e42a8652fea36284565 *inst/doc/smurf.R
 8659b842ef6a582e332bc4b5585fc887 *inst/doc/smurf.Rmd
-8fda635ec22ce85abefba204f2ffff15 *inst/doc/smurf.html
+53500063246a49fe6370bd77a23770d5 *inst/doc/smurf.html
 1bdc8aff239ce20bddffcf4ace4fcd4d *inst/examples/Rent_example1.R
 e4ae6a4420dafdbd034abd29615c880e *inst/examples/Rent_example2.R
 17e60caac5b1080aa1656b962c3e7327 *inst/examples/Rent_example3.R
@@ -54,8 +54,8 @@ be8b7e45ba87783603d95a6d622548e6 *man/predict.glmsmurf.Rd
 6871b2b360a878f827bad86573f0bf16 *man/residuals_reest.Rd
 887613f22e6742c5e9a8e1ced5d4e225 *man/smurf-package.Rd
 85e51b8da9ea1792225aa676eae129c9 *man/summary.glmsmurf.Rd
-ed094a36136562a89f343ed1426d5196 *src/Makevars
-ed094a36136562a89f343ed1426d5196 *src/Makevars.win
+f060b4eeda4e78b59771306fc35fb12d *src/Makevars
+f060b4eeda4e78b59771306fc35fb12d *src/Makevars.win
 f5fc817d7487d36ad8691bb4ff2c5aa0 *src/Penalty_PO.cpp
 8df88c6bea5bfe8a95ccc101c3e4f0f6 *src/RcppExports.cpp
 3ed77065fb52ac4fd66546c321d51c67 *tests/testthat.R
